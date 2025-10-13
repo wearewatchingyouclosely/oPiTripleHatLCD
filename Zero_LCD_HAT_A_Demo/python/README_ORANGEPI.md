@@ -42,7 +42,7 @@ The Orange Pi Zero 2W uses different GPIO numbering than Raspberry Pi. Here are 
 ```bash
 # SSH into your Orange Pi Zero 2W (SSH setup is out of scope for this guide)
 # Clone the repository
-git clone https://github.com/yourusername/oPiTripleHatLCD.git
+git clone https://github.com/wearewatchingyouclosely/oPiTripleHatLCD.git
 cd oPiTripleHatLCD/python
 ```
 
