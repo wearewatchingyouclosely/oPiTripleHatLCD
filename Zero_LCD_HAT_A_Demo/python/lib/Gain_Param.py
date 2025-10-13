@@ -18,26 +18,9 @@ class Gain_Param():
 
 
     def GET_Temp(self):
-        """Get CPU temperature, compatible with Orange Pi and Raspberry Pi"""
-        thermal_zones = [
-            '/sys/class/thermal/thermal_zone0/temp',
-            '/sys/class/thermal/thermal_zone1/temp',
-            '/sys/devices/virtual/thermal/thermal_zone0/temp'
-        ]
-        
-        for zone in thermal_zones:
-            try:
-                if os.path.exists(zone):
-                    with open(zone, 'rt') as f:
-                        temp = int(f.read().strip()) / 1000.0
-                        # Sanity check - temperature should be reasonable
-                        if 0 < temp < 150:
-                            return temp
-            except:
-                continue
-                
-        # If no thermal zone found, return None
-        return None
+        with open('/sys/class/thermal/thermal_zone0/temp', 'rt') as f:
+            temp = (int)(f.read() ) / 1000.0
+        return temp
 
     
 
