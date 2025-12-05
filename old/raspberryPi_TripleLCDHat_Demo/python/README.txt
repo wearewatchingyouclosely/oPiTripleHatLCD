@@ -1,3 +1,7 @@
+https://www.waveshare.com/zero-lcd-hat-a.htm
+www.waveshare.com/wiki/Zero_LCD_HAT_(A)
+
+
 /*zh-CN*/
 
 cd example
